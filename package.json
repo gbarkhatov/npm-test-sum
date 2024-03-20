@@ -1,14 +1,12 @@
 {
   "name": "npm-test-sum",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "module": "dist/index.esm.js",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
   "scripts": {
-    "build": "node build.js",
-    "prepublishOnly": "npm run dts && npm run build",
-    "dts": "./node_modules/.bin/npm-dts generate"
+    "build": "node build.js"
   },
   "files": [
     "dist/*"
