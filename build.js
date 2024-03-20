@@ -1,15 +1,8 @@
 import { build } from "esbuild"
-import npmDts from "npm-dts"
-const { Generator } = npmDts
 
 // import { dependencies, peerDependencies } from "./package.json" assert { type: "json" };
 
 // console.log("dependencies", dependencies)
-
-new Generator({
-  entry: "src/index.ts",
-  output: "dist/index.d.ts"
-}).generate()
 
 const shared = {
   entryPoints: ["src/index.ts"],
