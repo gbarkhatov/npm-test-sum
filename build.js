@@ -6,10 +6,10 @@ const { Generator } = npmDts
 
 // console.log("dependencies", dependencies)
 
-new Generator({
-  entry: "src/index.ts",
-  output: "dist/index.d.ts"
-}).generate()
+// new Generator({
+//   entry: "src/index.ts",
+//   output: "dist/index.d.ts"
+// }).generate()
 
 const shared = {
   entryPoints: ["src/index.ts"],
