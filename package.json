@@ -2,10 +2,15 @@
   "name": "npm-test-sum",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "module": "dist/index.esm.js",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "node build.js"
   },
+  "files": [
+    "dist/*"
+  ],
   "keywords": [],
   "author": "",
   "license": "ISC",
