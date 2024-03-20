@@ -1,7 +1,7 @@
 const { build } = require("esbuild")
 const { Generator } = require("npm-dts")
 
-// const { dependencies, peerDependencies } = require("./package.json")
+const { dependencies, peerDependencies } = require("./package.json")
 
 new Generator({
   entry: "src/index.ts",
@@ -11,8 +11,10 @@ new Generator({
 const shared = {
   entryPoints: ["src/index.ts"],
   bundle: true,
-  minify: true
-  // external: Object.keys(dependencies).concat(Object.keys(peerDependencies))
+  minify: true,
+  external: Object.keys(dependencies || {}).concat(
+    Object.keys(peerDependencies || {})
+  )
 }
 
 build({
