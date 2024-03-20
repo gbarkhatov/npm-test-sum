@@ -1,7 +1,10 @@
-const { build } = require("esbuild")
-const { Generator } = require("npm-dts")
+import { build } from "esbuild"
+import npmDts from "npm-dts"
+const { Generator } = npmDts
 
-const { dependencies, peerDependencies } = require("./package.json")
+// import { dependencies, peerDependencies } from "./package.json" assert { type: "json" };
+
+// console.log("dependencies", dependencies)
 
 new Generator({
   entry: "src/index.ts",
@@ -11,10 +14,10 @@ new Generator({
 const shared = {
   entryPoints: ["src/index.ts"],
   bundle: true,
-  minify: true,
-  external: Object.keys(dependencies || {}).concat(
-    Object.keys(peerDependencies || {})
-  )
+  minify: true
+  // external: Object.keys(dependencies || {}).concat(
+  //   Object.keys(peerDependencies || {})
+  // )
 }
 
 build({
