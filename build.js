@@ -26,7 +26,6 @@ build({
 build({
   ...shared,
   platform: "neutral", // for ESM
-  format: "esm",
-  format: "esm",
-  outfile: "dist/index.esm.js"
+  outfile: "dist/index.esm.js",
+  format: "esm"
 })
