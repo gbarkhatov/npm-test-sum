@@ -23,7 +23,8 @@ const shared = {
 build({
   ...shared,
   platform: "node", // for CJS
-  outfile: "dist/index.js"
+  outfile: "dist/index.js",
+  format: "esm"
 })
 
 build({
